@@ -26,7 +26,7 @@ class App extends Component {
 
   calculateFaceLocation = (data) =>{
 const clarifaiFace =  data.outputs[0].data.regions[0].region_info.bounding_box;
-  // console.log(clarifaiFace);
+  console.log(" detected facedata", clarifaiFace);
 const image = document.getElementById("inputimage");
 const width = Number(image.width);
 const height = Number(image.height);
@@ -39,7 +39,7 @@ return {
   }
 
 displayFacebox = (box) => {
-  // console.log(box);
+  console.log(box);
   this.setState({box: box});
 }
 
@@ -63,38 +63,24 @@ displayFacebox = (box) => {
           loaded={this.particlesLoaded}
           options={{
             particles: {
-              color: {
-                value: "#ffffff",
-              },
-              collisions: {
-                enable: true,
-              },
-              move: {
-                direction: "none",
-                enable: true,
-                outMode: "bounce",
-                random: false,
-              },
               number: {
+                value: 150,
                 density: {
                   enable: true,
-                  value_area: 900,
-                },
-                value: 100,
-              },
-              opacity: {
-                value: 0.5,
-              },
-              shape: {
-                type: "circle",
-              },
-              size: {
-                random: true,
-                value: 4,
-              },
+                  value_area: 800
+                }
+              }
             },
-            detectRetina: true,
-          }}
+            interactivity: {
+              events: {
+                onhover: {
+                  enable: true,
+                  mode: 'repulse'
+                }
+              }
+            }
+          }
+        }
         />
         <Navigation className="Navbar" />
         <Logo />
