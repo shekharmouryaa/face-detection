@@ -63,24 +63,45 @@ displayFacebox = (box) => {
           loaded={this.particlesLoaded}
           options={{
             particles: {
+              color: {
+                value: "#ffffff",
+              },
+              links: {
+                color: "#ffffff",
+                distance: 180,
+                enable: true,
+                opacity: 0.5,
+                width: 1,
+              },
+              collisions: {
+                enable: true,
+              },
+              move: {
+                direction: "none",
+                enable: true,
+                outMode: "bounce",
+                random: false,
+              },
               number: {
-                value: 150,
                 density: {
                   enable: true,
-                  value_area: 800
-                }
-              }
+                  value_area: 900,
+                },
+                value: 100,
+              },
+              opacity: {
+                value: 0.5,
+              },
+              shape: {
+                type: "circle",
+              },
+              size: {
+                random: true,
+                value: 4,
+              },
             },
-            interactivity: {
-              events: {
-                onhover: {
-                  enable: true,
-                  mode: 'repulse'
-                }
-              }
-            }
-          }
-        }
+            detectRetina: true,
+          }}
         />
         <Navigation className="Navbar" />
         <Logo />
