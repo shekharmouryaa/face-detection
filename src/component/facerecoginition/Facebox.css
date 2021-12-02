@@ -1,0 +1,23 @@
+.bounding-box{
+    position:absolute;
+    box-shadow: 0 0 0 2px rgb(223, 56, 78) inset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .center{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: auto;
+    padding: 10px;
+  }
+  .face-box{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
